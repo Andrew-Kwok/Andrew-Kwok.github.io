@@ -6,11 +6,20 @@
  	box-sizing: border-box;
 }
 
+:root {
+	--primary: #eee;
+	--secondary: #fff;
+	--text: #000;
+	--line_color: #222;
+	--github: #333;
+}
+
 html {
 	font-family: 'Poppins';
 	font-size: 18px;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 } 
+
 
 .container {
 	width: 100%;
@@ -86,7 +95,6 @@ html {
 	list-style: none;
 	display: flex;
 	flex-direction: row;
-	margin-right: 20px;
 }
 
 .navbar .nav-links li {
@@ -98,12 +106,71 @@ html {
 	color: white;
 }
 
+
+/* The switch */
+.switch {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	aspect-ratio: 2 / 1;
+	margin-right: 50px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background-color: #ccc;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  aspect-ratio: 1 / 1;
+  height: 80%;
+  left: 10%; bottom: 10%;
+  background-color: white;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-o-transform: translateX(100%);
+}
+
+.slider {
+	border-radius: 2rem;
+}
+
+.slider:before {
+  border-radius: 50%;
+}
+
 .navbar .nav-links li a,
 .navbar .nav-links li a:after,
 .navbar .nav-links li a:before {
 	transition: all 500ms
 }
-
 
 .navbar .nav-links li a {
 	position: relative;
@@ -126,8 +193,12 @@ html {
 }
 
 
-
 /* Self Information */
+#self-info {
+	background-color: var(--primary);
+	color: var(--text);
+}
+
 .self-info {
 	width: 60%;
 	height: 80vh;
@@ -155,12 +226,12 @@ html {
 
 .self-info .info1 {
 	text-align: left;
-	border-left: 5px solid gray;
+	border-left: 5px solid var(--mid_color);
 }
 
 .self-info .info2 {
 	text-align: right;
-	border-right: 5px solid gray;
+	border-right: 5px solid var(--mid_color);
 }
 
 .self-info p {
@@ -172,7 +243,9 @@ html {
 
 /* Study Timeline */
 #study-timeline {
-	margin: 50px 0;
+	padding: 50px 0;
+	background-color: var(--secondary);
+	color: var(--text);
 }
 
 #study-timeline h1 {
@@ -196,7 +269,7 @@ html {
 
 #study-timeline .timeline .timeline-content {
 	padding: 20px;
-	background-color: #eee;
+	background-color: var(--primary);
 	border-radius: 10px;
 	margin: 20px 0;
 }
@@ -232,7 +305,7 @@ html {
 
 #study-timeline .timeline .timeline-content li a {
 	text-decoration: none;
-	color: black;
+	color: var(--text);
 }
 
 @media only screen and (min-width: 768px) {
@@ -244,7 +317,7 @@ html {
 	    transform: translateX(-50%);
 	    width: 2px;
 	    height: 100%;
-	    background-color: #222;
+	    background-color: var(--line_color);
 	}
 
 	#study-timeline .timeline .timeline-content {
@@ -252,29 +325,33 @@ html {
 		position: relative;
 		margin-bottom: 50px;
 	}
+		
 	
 	#study-timeline .timeline .timeline-content:nth-child(odd) {
 		float: left;
 		clear: right;
-		transform: translateX(-30px);
+		right: 30px;
 		border-radius: 20px 0 20px 20px;
 	}
+	
 
 	#study-timeline .timeline .timeline-content:nth-child(even) {
 		float: right;
 		clear: left;
-		transform: translateX(30px);
+		left: 30px;
 		border-radius: 0px 20px 20px 20px;
 	}
 }
 
 
 /* Footer */
+#contact {
+	background-color: var(--primary);
+}
+
 .footer {
 	width: 100%;
 	height: 100vh;
-
-	background-color: #eee;
 
 	display: flex;
 	flex-direction: column;
@@ -285,6 +362,7 @@ html {
 }
 
 .footer h1 {
+	color: var(--text);
 	font-size: 5rem;
 }
 
@@ -312,7 +390,7 @@ html {
 
 .footer .contact-list a {
 	text.decoration: none;
-	color: black;
+	color: var(--text);
 }
 
 .footer .contact-list #contact-email:hover {
@@ -320,7 +398,7 @@ html {
 }
 
 .footer .contact-list #contact-git:hover {
-	color: #333;
+	color: var(--github);
 }
 
 .footer .contact-list #contact-ig:hover {
