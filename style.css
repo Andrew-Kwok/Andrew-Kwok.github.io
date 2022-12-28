@@ -226,12 +226,12 @@ input:checked + .slider:before {
 
 .self-info .info1 {
 	text-align: left;
-	border-left: 5px solid var(--mid_color);
+	border-left: 5px solid #888;
 }
 
 .self-info .info2 {
 	text-align: right;
-	border-right: 5px solid var(--mid_color);
+	border-right: 5px solid #888;
 }
 
 .self-info p {
