@@ -68,6 +68,18 @@ html {
 	align-self: flex-end;
 }
 
+@media only screen and (max-width: 768px) {
+	.hero .intro h1 {
+		font-size: 1.6rem;
+	}
+	.hero .hero-footer .intro-asterisk {
+		font-size: .27rem;
+	}
+	.hero .hero-footer .caption {
+		font-size: .54rem;
+	}
+}
+
 
 /* Navbar */
 .navbar {
@@ -101,11 +113,16 @@ html {
 	margin-right: 20px;
 }
 
+.navbar .nav-links #lightdark-symbol {
+	margin-right: 10px;
+	transform: scale(1.3);
+	transform: rotate(135deg)
+}
+
 .navbar .nav-links a {
 	text-decoration: none;
 	color: white;
 }
-
 
 /* The switch */
 .switch {
@@ -192,6 +209,22 @@ input:checked + .slider:before {
 	width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+	.navbar h1 {
+		font-size: 1rem;
+	}
+	.navbar .nav-links li {
+		font-size: .5rem;
+		margin-right: 10px;
+	}
+	.navbar .nav-links #lightdark-symbol {
+		margin-right: 5px;
+	}
+	.switch {
+		margin-right: 25px;
+	}
+}
+
 
 /* Self Information */
 #self-info {
@@ -226,18 +259,30 @@ input:checked + .slider:before {
 
 .self-info .info1 {
 	text-align: left;
-	border-left: 5px solid var(--mid_color);
+	border-left: 5px solid #888;
 }
 
 .self-info .info2 {
 	text-align: right;
-	border-right: 5px solid var(--mid_color);
+	border-right: 5px solid #888;
 }
 
 .self-info p {
 	font-size: 1.5rem;
 	margin-left: 8px;
 	margin-right: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+	.self-info .title h1 {
+		font-size: 1.6rem;
+	}
+	.self-info .title h2 {
+		font-size: 1.06rem;
+	}
+	.self-info p {
+		font-size: 0.8rem;
+	}
 }
 
 
@@ -272,6 +317,7 @@ input:checked + .slider:before {
 	background-color: var(--primary);
 	border-radius: 10px;
 	margin: 20px 0;
+	margin-bottom: 50px;
 }
 
 #study-timeline .timeline .timeline-content:first-child {
@@ -323,7 +369,6 @@ input:checked + .slider:before {
 	#study-timeline .timeline .timeline-content {
 		width: 50%;
 		position: relative;
-		margin-bottom: 50px;
 	}
 		
 	
@@ -340,6 +385,19 @@ input:checked + .slider:before {
 		clear: left;
 		left: 30px;
 		border-radius: 0px 20px 20px 20px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#study-timeline h1 {
+		font-size: 2.67rem;
+	}
+	#study-timeline .timeline .timeline-content h2 {
+		font-size: 0.854rem;
+	}
+	#study-timeline .timeline .timeline-content .date {
+		font-size: 0.43;
+		top: -20px;
 	}
 }
 
@@ -411,4 +469,14 @@ input:checked + .slider:before {
 
 .footer .contact-list #contact-wa:hover {
 	color: #25d366;
+}
+
+@media only screen and (max-width: 768px) {
+	.footer h1 {
+		font-size: 2.67rem;
+	}
+	.footer .contact-list {
+		font-size: 1.6rem;
+		width: 50%;
+	}
 }
