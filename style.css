@@ -232,6 +232,10 @@ input:checked + .slider:before {
 	color: var(--text);
 }
 
+#self-info a {
+	color: var(--text);
+}
+
 .self-info {
 	width: 60%;
 	height: 80vh;
